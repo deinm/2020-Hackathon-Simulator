@@ -5,6 +5,7 @@ from Parking import Parking
 from Crosswalk import Crosswalk
 from TrafficSign import Right, Left
 
+
 import numpy as np
 
 Map1 = (
@@ -37,7 +38,6 @@ Map1 = (
     ],
     CarSprite('images/car.png', (500, 760)),
 )
-
 Map2 = (
     [
         WallSprite((500, 0), 1000, 4),
@@ -166,4 +166,34 @@ Map4 = (
         else Right((470, 540), 60, 60)
     ],
     CarSprite('images/car.png', (500, 760)),
+)
+
+Map5 = (
+    [
+        WallSprite((500, 0), 1000, 4),
+        WallSprite((1000, 50), 4, 100),
+        WallSprite((550, 100), 900, 4),
+        WallSprite((0, 150), 4, 300),
+        WallSprite((100, 150), 4, 100),
+        WallSprite((450, 300), 900, 4),
+        WallSprite((550, 200), 900, 4),
+        WallSprite((1000, 350), 4, 300),
+        WallSprite((550, 500), 900, 4),
+        WallSprite((900, 350), 4, 100),
+        WallSprite((450, 400), 900, 4),
+        WallSprite((0, 450), 4, 100),
+    ],
+    [
+        TrophySprite((900, 12))
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    CarSprite('images/car.png', (50, 500)),
 )
