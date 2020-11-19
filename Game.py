@@ -137,7 +137,7 @@ class Game:
             if self.car_update:
                 self.car_group.update(deltat)
             collisions = pygame.sprite.groupcollide(
-                self.car_group, self.wall_group, False, False, collided=None)
+                self.car_group, self.wall_group, False, False, collided=pygame.sprite.collide_rect_ratio(0.9))
             if collisions != {}:
                 self.car_update = False
                 self.win_condition = False
