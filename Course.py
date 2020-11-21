@@ -10,22 +10,36 @@ import numpy as np
 
 Map1 = (
     [
-        WallSprite((500, 0), 1000, 4),
+        WallSprite((500, 0), 1000, 4),  # Boundary box
         WallSprite((500, 800), 1000, 4),
         WallSprite((0, 400), 4, 800),
         WallSprite((1000, 400), 4, 800),
-        WallSprite((400, 400), 4, 800),
-        WallSprite((600, 450), 4, 700),
-        WallSprite((540, 650), 120, 4),
-        WallSprite((540, 450), 120, 4),
-        WallSprite((540, 300), 120, 4),
-        WallSprite((540, 100), 120, 4),
-        WallSprite((460, 200), 120, 4),
-        WallSprite((460, 375), 120, 4),
-        WallSprite((460, 550), 120, 4),
+        WallSprite((450, 700), 900, 4),  # Horizontal line
+        WallSprite((550, 500), 900, 4),
+        WallSprite((900, 600), 200, 4),
+        WallSprite((450, 300), 900, 4),
+        WallSprite((535, 100), 930, 4),
+        WallSprite((650, 650), 150, 100),  # Static obstacle - Big
+        WallSprite((395, 550), 150, 100),
+        WallSprite((175, 650), 150, 100),
+        WallSprite((100, 440), 4, 120),  # Static obstacle - Small ver1
+        WallSprite((270, 360), 4, 120),
+        WallSprite((440, 440), 4, 120),
+        WallSprite((610, 360), 4, 120),
+        WallSprite((780, 440), 4, 120),
+        WallSprite((900, 360), 4, 120),
+        WallSprite((900, 230), 4, 140),  # Static obstacle - Small ver2
+        WallSprite((750, 170), 4, 140),
+        WallSprite((650, 230), 4, 140),
+        WallSprite((550, 170), 4, 140),
+        WallSprite((480, 230), 4, 140),
+        WallSprite((410, 170), 4, 140),
+        WallSprite((310, 230), 4, 140),
+        WallSprite((210, 170), 4, 140),
+        WallSprite((30, 230), 60, 140),
     ],
     [
-        TrophySprite((540, 12))
+        TrophySprite((930, 15))
     ],
     [
 
