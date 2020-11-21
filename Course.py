@@ -16,12 +16,12 @@ Map1 = (
         WallSprite((1000, 400), 4, 800),
         WallSprite((450, 700), 900, 4),  # Horizontal line
         WallSprite((550, 500), 900, 4),
-        WallSprite((900, 600), 200, 4),
         WallSprite((450, 300), 900, 4),
         WallSprite((535, 100), 930, 4),
-        WallSprite((650, 650), 150, 100),  # Static obstacle - Big
-        WallSprite((395, 550), 150, 100),
-        WallSprite((175, 650), 150, 100),
+        WallSprite((910, 550), 180, 100),  # Static obstacle - Big
+        WallSprite((650, 650), 150, 100),
+        WallSprite((360, 550), 180, 100),
+        WallSprite((100, 650), 200, 100),
         WallSprite((100, 440), 4, 120),  # Static obstacle - Small ver1
         WallSprite((270, 360), 4, 120),
         WallSprite((440, 440), 4, 120),
