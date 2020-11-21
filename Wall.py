@@ -15,6 +15,19 @@ class WallSprite(pygame.sprite.Sprite):
     def update(self):
         pass
 
+class invisible_WallSprite(pygame.sprite.Sprite):
+
+    def __init__(self, position, width, height):
+        super(invisible_WallSprite, self).__init__()
+        black_wall = 0 * np.ones((width, height, 3))
+        self.normal = pygame.surfarray.make_surface(black_wall)
+        self.rect = pygame.Rect(self.normal.get_rect())
+        self.rect.center = position
+        self.image = self.normal
+
+    def update(self):
+        pass
+
 
 if __name__ == "__main__":
     pygame.init()

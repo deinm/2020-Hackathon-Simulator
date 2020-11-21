@@ -1,4 +1,5 @@
 from Wall import WallSprite
+from Wall import invisible_WallSprite
 from Car import CarSprite
 from Trophy import TrophySprite
 from Parking import Parking
@@ -127,20 +128,18 @@ Map3 = (
         WallSprite((700, 220), 4, 260),
         WallSprite((800, 130), 4, 260),
         WallSprite((900, 220), 4, 260),
-
         WallSprite((100, 685), 4, 230),
-        WallSprite((190, 570), 180, 4),
 
-        WallSprite((380, 570), 4, 240),
-        WallSprite((290, 690), 180, 4),
+        invisible_WallSprite((190, 570), 180, 4),
+        invisible_WallSprite((380, 570), 4, 235),
+        invisible_WallSprite((290, 690), 180, 4),
+        invisible_WallSprite((485, 670), 4, 255),
+        invisible_WallSprite((590, 570), 4, 235),
+        invisible_WallSprite((640, 690), 100, 4),
+        invisible_WallSprite((750, 570), 100, 4),
 
-        WallSprite((485, 670), 4, 260),
-        WallSprite((590, 570), 4, 240),
-        WallSprite((640, 690), 100, 4),
-        WallSprite((750, 570), 100, 4),
-
-        WallSprite((900, 580), 4, 260),
-        WallSprite((800, 685), 4, 230),
+        invisible_WallSprite((900, 580), 4, 260),
+        invisible_WallSprite((800, 685), 4, 225),
     ],
     [
         TrophySprite((920, 270))
