@@ -50,7 +50,7 @@ Map1 = (
     [
 
     ],
-    CarSprite('images/car.png', (500, 760)),
+    CarSprite('images/car.png', (40, 750)),
 )
 
 Map2 = (
@@ -105,62 +105,67 @@ Map2 = (
     ],
     [
         Crosswalk((60, 400), 120, 4, interval=40, phase=0),
-        Crosswalk((180, 300), 120, 4, interval=30, phase=5),
-        Crosswalk((180, 500), 120, 4, interval=30, phase=15),
-        Crosswalk((300, 200), 120, 4, interval=20, phase=30),
-        Crosswalk((300, 600), 120, 4, interval=20, phase=40),
-        Crosswalk((420, 400), 120, 4, interval=40, phase=55),
-        Crosswalk((540, 600), 120, 4, interval=20, phase=65),
-        Crosswalk((540, 200), 120, 4, interval=20, phase=80),
-        Crosswalk((660, 300), 120, 4, interval=30, phase=70),
-        Crosswalk((660, 500), 120, 4, interval=30, phase=85),
-        Crosswalk((780, 400), 120, 4, interval=40, phase=95),
+        # Crosswalk((180, 300), 120, 4, interval=30, phase=5),
+        # Crosswalk((180, 500), 120, 4, interval=30, phase=15),
+        # Crosswalk((300, 200), 120, 4, interval=20, phase=30),
+        # Crosswalk((300, 600), 120, 4, interval=20, phase=40),
+        # Crosswalk((420, 400), 120, 4, interval=40, phase=55),
+        # Crosswalk((540, 600), 120, 4, interval=20, phase=65),
+        # Crosswalk((540, 200), 120, 4, interval=20, phase=80),
+        # Crosswalk((660, 300), 120, 4, interval=30, phase=70),
+        # Crosswalk((660, 500), 120, 4, interval=30, phase=85),
+        # Crosswalk((780, 400), 120, 4, interval=40, phase=95),
     ],
     [
 
     ],
-    CarSprite('images/car.png', (60, 750)),
+    CarSprite('images/car.png', (50, 750)),
 )
 
 Map3 = (
     [
+        WallSprite((450, 700), 4, 200),
+        WallSprite((510, 550), 4, 100),
+        WallSprite((480, 500), 60, 4),
+        WallSprite((480, 600), 60, 4),
+        WallSprite((450, 300), 4, 400),
+        WallSprite((550, 0), 200, 4),
+        WallSprite((500, 100), 100, 4),
+        WallSprite((550, 150), 4, 100),
+        WallSprite((610, 150), 4, 100),
+        WallSprite((580, 200), 60, 4),
+        WallSprite((730, 100), 240, 4),
+        WallSprite((850, 400), 4, 600),
+        WallSprite((700, 500), 4, 600),
+        WallSprite((775, 200), 150, 4),
+        WallSprite((150, 460), 4, 720),
+        WallSprite((300, 340), 4, 720),
+        WallSprite((500, 800), 1000, 4),
         WallSprite((500, 0), 1000, 4),
-        WallSprite((160, 800), 320, 4),
-        WallSprite((720, 800), 560, 4),
         WallSprite((0, 400), 4, 800),
         WallSprite((1000, 400), 4, 800),
-        WallSprite((560, 600), 4, 400),
-        WallSprite((560, 150), 4, 300),
-        WallSprite((620, 350), 4, 100),
-        WallSprite((590, 300), 60, 4),
-        WallSprite((590, 400), 60, 4),
-        WallSprite((440, 460), 4, 720),
-        WallSprite((320, 100), 4, 200),
-        WallSprite((320, 100), 4, 200),
-        WallSprite((320, 680), 4, 240),
-        WallSprite((320, 340), 4, 160),
-        WallSprite((220, 230), 4, 60),
-        WallSprite((270, 200), 100, 4),
-        WallSprite((270, 260), 100, 4),
-        WallSprite((220, 490), 4, 140),
-        WallSprite((270, 420), 100, 4),
-        WallSprite((270, 560), 100, 4),
     ],
     [
-        TrophySprite((350, 720))
+        TrophySprite((745, 230))
     ],
     [
-        Parking((220, 200), 100, 60),
-        Parking((220, 500), 100, 60),
-        Parking((560, 300), 60, 100),
+        Parking((450, 500), 60, 100),
+        Parking((550, 100), 60, 100),
+
+    ],
+    [
+        Crosswalk((75, 300), 150, 4, interval=30, phase=0),
+        Crosswalk((225, 500), 150, 4, interval=30, phase=8),
+        Crosswalk((800, 50), 4, 100, interval=30, phase=16),
+        Crosswalk((925, 150), 150, 4, interval=30, phase=24),
+        Crosswalk((925, 400), 150, 4, interval=30, phase=32),
+        Crosswalk((925, 600), 150, 4, interval=30, phase=40),
+        Crosswalk((775, 500), 150, 4, interval=30, phase=48),
     ],
     [
 
     ],
-    [
-
-    ],
-    CarSprite('images/car.png', (500, 760)),
+    CarSprite('images/car.png', (75, 760)),
 )
 
 Map4 = (
