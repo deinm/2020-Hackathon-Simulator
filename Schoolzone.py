@@ -5,7 +5,7 @@ import pygame
 import sys
 
 
-class Parking(V2X):
+class Schoolzone(V2X):
     def __init__(self, position, width, height):
         V2X.__init__(self, position, name="Schoolzone")
         self.mission_complete = False
@@ -17,7 +17,7 @@ class Parking(V2X):
         self.data = [
                 self.name, self.position,
                 self.width, self.height,
-                self.mission_complete, self.time_left
+                self.mission_complete
             ]
 
     def update(self, car: CarSprite):
@@ -34,18 +34,12 @@ class Parking(V2X):
                 in_mission = False
                 break
 
-        if in_mission:
-            self.time_left -= 1
-            if self.time_left < 0:
-                self.mission_complete = True
-                self.stay_time = -1
-        else:
-            self.time_left = self.stay_time
+        print(in_mission)
 
         self.data = [
             self.name, self.position,
             self.width, self.height,
-            self.mission_complete, self.time_left
+            self.mission_complete
         ]
 
     def draw(self, screen):
@@ -53,14 +47,14 @@ class Parking(V2X):
         if not self.mission_complete:
             pygame.draw.rect(
                     screen,
-                    (50, 50, 255),
+                    (180, 70, 70),
                     [x, y, self.width, self.height],
                     0
                 )
 
-            font_size = int((self.width + self.height) / 6)
+            font_size = int((self.width + self.height) / 15)
             font = pygame.font.Font('freesansbold.ttf', font_size)
-            text = font.render("P", 1, (250, 250, 250))
+            text = font.render("S", 1, (250, 250, 250))
             textpos = text.get_rect()
             screen.blit(
                     text,
@@ -95,7 +89,7 @@ if __name__ == "__main__":
     clock = pygame.time.Clock()
 
     c = CarSprite('images/car.png', (320, 240))
-    p = Parking((320, 240), 100, 60)
+    p = Schoolzone((320, 240), 100, 60)
 
     while True:
         clock.tick(5)

@@ -14,7 +14,7 @@ from Wall import WallSprite
 
 class Game:
     def __init__(self, walls, trophies, parkings,
-                 crosswalks, traffic_signs, car, database):
+                 crosswalks, traffic_signs, schoolzone, car, database):
         self.init_args =\
             [
                 copy.copy(walls),
@@ -28,6 +28,7 @@ class Game:
         self.car = car
         self.screen = pygame.display.set_mode((1000, 800))
         self.traffic_signs = traffic_signs
+        self.school_zones = schoolzone
         self.clock = pygame.time.Clock()
         font = pygame.font.Font(None, 75)
         self.win_font = pygame.font.Font(None, 50)
@@ -200,6 +201,7 @@ class Game:
             self.wall_group.update()
             self.crosswalk_group.update()
             self.crosswalk_group.draw(self.screen)
+
             for crosswalk in self.crosswalk_group:
                 if crosswalk.is_in_range(self.car):
                     temp_v2x_data.append((id(crosswalk), crosswalk.data))
@@ -208,6 +210,12 @@ class Game:
             for traffic_sign in self.traffic_signs:
                 traffic_sign.draw(self.screen)
                 temp_v2x_data.append((id(traffic_sign), traffic_sign.data))
+
+            for school_zone in self.school_zones:
+                school_zone.update(self.car)
+                school_zone.draw(self.screen)
+                temp_v2x_data.append((id(school_zone), school_zone.data))
+
             for v2x_data in temp_v2x_data:
                 key, value = v2x_data
                 new_dict[key] = value

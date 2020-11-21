@@ -3,6 +3,7 @@ from Car import CarSprite
 from Trophy import TrophySprite
 from Parking import Parking
 from Crosswalk import Crosswalk
+from Schoolzone import Schoolzone
 from TrafficSign import Right, Left
 
 
@@ -167,7 +168,7 @@ Map3 = (
 
     ],
     [
-
+        Schoolzone((250, 350), 550, 100),
     ],
     CarSprite('images/car.png', (50, 750)),
 )
