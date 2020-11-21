@@ -50,6 +50,9 @@ Map1 = (
     [
 
     ],
+    [
+
+    ],
     CarSprite('images/car.png', (40, 750), 270),
 )
 
@@ -93,6 +96,9 @@ Map2 = (
         Crosswalk((925, 400), 150, 4, interval=30, phase=32),
         Crosswalk((925, 600), 150, 4, interval=30, phase=40),
         Crosswalk((775, 500), 150, 4, interval=30, phase=48),
+    ],
+    [
+
     ],
     [
 
@@ -156,6 +162,9 @@ Map3 = (
 
         Crosswalk((850, 180), 100, 4, interval=40, phase=80),
         Crosswalk((950, 220), 100, 4, interval=40, phase=90),
+    ],
+    [
+
     ],
     [
 
