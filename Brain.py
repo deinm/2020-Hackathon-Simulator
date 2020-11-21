@@ -17,10 +17,12 @@ class Brain:
             '''
             DO NOT CHANGE CODE ABOVE!!!!
 
-            1. How can i get a lidar data?
-                data = self.database.lidar.data
+            1. How can I get a lidar / gps / imu data?
+                Lidar : data = self.database.lidar.data
+                Gps : data = self.database.car.position
+                IMU : data = self.database.car.direction
 
-            2. How can i move a car?
+            2. How can I move a car?
                 self.database.control.up()
                 self.database.control.down()
                 self.database.control.right()
@@ -33,14 +35,17 @@ class Brain:
                 self.right(num)
                 self.left(num)
 
-                ☆☆☆☆☆ In one loop,
-                you can only change the speed up to 5 and the angle up to 8!!
+                ☆☆☆☆☆
+                In one loop,
+                you can only change the acceleration up to 5 and the angle up to 8!!
+                Maximum speed of car is 15 and maximum angle of car can rotate is 8!!
+                ☆☆☆☆☆
 
-            3. How can i get a car status data?
+            3. How can I get a car status data?
                 self.database.car.direction
                 self.database.car.speed
 
-            4. How can i get a v2x data?
+            4. How can I get a v2x data?
                 self.database.v2x_data
             '''
 
