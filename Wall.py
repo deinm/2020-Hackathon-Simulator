@@ -15,8 +15,8 @@ class WallSprite(pygame.sprite.Sprite):
     def update(self):
         pass
 
-class invisible_WallSprite(pygame.sprite.Sprite):
 
+class invisible_WallSprite(pygame.sprite.Sprite):
     def __init__(self, position, width, height):
         super(invisible_WallSprite, self).__init__()
         black_wall = 0 * np.ones((width, height, 3))
