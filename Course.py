@@ -38,20 +38,50 @@ Map1 = (
     ],
     CarSprite('images/car.png', (500, 760)),
 )
+
 Map2 = (
     [
         WallSprite((500, 0), 1000, 4),
         WallSprite((500, 800), 1000, 4),
-        WallSprite((0, 400), 4, 800),
-        WallSprite((1000, 450), 4, 700),
-        WallSprite((120, 450), 4, 700),
-        WallSprite((360, 450), 4, 700),
-        WallSprite((600, 450), 4, 700),
-        WallSprite((840, 450), 4, 700),
-        WallSprite((920, 100), 160, 4),
-        WallSprite((240, 350), 4, 700),
-        WallSprite((480, 350), 4, 700),
-        WallSprite((720, 350), 4, 700),
+        WallSprite((0, 400), 4, 1000),
+        WallSprite((1000, 400), 4, 1000),
+
+        WallSprite((550, 350), 900, 4),
+        WallSprite((450, 450), 900, 4),
+
+        WallSprite((100, 230), 4, 240),
+        WallSprite((200, 120), 4, 240),
+        WallSprite((300, 230), 4, 240),
+        WallSprite((400, 120), 4, 240),
+        WallSprite((500, 230), 4, 240),
+        WallSprite((600, 120), 4, 240),
+        WallSprite((700, 230), 4, 240),
+        WallSprite((800, 120), 4, 240),
+        WallSprite((900, 230), 4, 240),
+
+        WallSprite((100, 685), 4, 230),
+        WallSprite((190, 570), 180, 4),
+
+        WallSprite((380, 570), 4, 240),
+        WallSprite((290, 690), 180, 4),
+
+        WallSprite((490, 690), 4, 240),
+        WallSprite((590, 570), 4, 240),
+        WallSprite((640, 690), 100, 4),
+        WallSprite((750, 570), 100, 4),
+
+        WallSprite((900, 570), 4, 240),
+        WallSprite((800, 685), 4, 230),
+
+        # WallSprite((120, 200), 4, 900),
+        # WallSprite((360, 450), 4, 900),
+
+        # WallSprite((600, 450), 4, 700),
+        # WallSprite((840, 450), 4, 700),
+        # WallSprite((920, 100), 160, 4),
+        # WallSprite((240, 350), 4, 700),
+        # WallSprite((480, 350), 4, 700),
+        # WallSprite((720, 350), 4, 700),
     ],
     [
         TrophySprite((930, 20))
