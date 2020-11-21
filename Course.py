@@ -50,7 +50,7 @@ Map1 = (
     [
 
     ],
-    CarSprite('images/car.png', (40, 750)),
+    CarSprite('images/car.png', (40, 750), 270),
 )
 
 
