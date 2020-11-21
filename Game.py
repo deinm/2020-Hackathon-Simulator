@@ -212,7 +212,15 @@ class Game:
                 temp_v2x_data.append((id(traffic_sign), traffic_sign.data))
 
             for school_zone in self.school_zones:
-                school_zone.update(self.car)
+                check_speed = school_zone.update(self.car)
+                if check_speed is False:
+                    self.car_update = False
+                    self.win_condition = False
+                    self.car.image = pygame.image.load('images/collision.png')
+                    self.car.MAX_FORWARD_SPEED = 0
+                    self.car.MAX_REVERSE_SPEED = 0
+                    self.car.k_right = 0
+                    self.car.k_left = 0
                 school_zone.draw(self.screen)
                 temp_v2x_data.append((id(school_zone), school_zone.data))
 

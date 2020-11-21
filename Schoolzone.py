@@ -34,13 +34,16 @@ class Schoolzone(V2X):
                 in_mission = False
                 break
 
-        print(in_mission)
+        if in_mission and abs(car.speed) > 6:
+            return False
 
         self.data = [
             self.name, self.position,
             self.width, self.height,
             self.mission_complete
         ]
+
+        return True
 
     def draw(self, screen):
         x, y = self.position
