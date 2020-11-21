@@ -127,42 +127,35 @@ Map3 = (
         WallSprite((380, 570), 4, 240),
         WallSprite((290, 690), 180, 4),
 
-        WallSprite((490, 690), 4, 240),
+        WallSprite((485, 690), 4, 240),
         WallSprite((590, 570), 4, 240),
         WallSprite((640, 690), 100, 4),
         WallSprite((750, 570), 100, 4),
 
         WallSprite((900, 570), 4, 240),
         WallSprite((800, 685), 4, 230),
-
-        # WallSprite((120, 200), 4, 900),
-        # WallSprite((360, 450), 4, 900),
-
-        # WallSprite((600, 450), 4, 700),
-        # WallSprite((840, 450), 4, 700),
-        # WallSprite((920, 100), 160, 4),
-        # WallSprite((240, 350), 4, 700),
-        # WallSprite((480, 350), 4, 700),
-        # WallSprite((720, 350), 4, 700),
     ],
     [
-        TrophySprite((930, 20))
+        TrophySprite((920, 270))
     ],
     [
 
     ],
     [
-        Crosswalk((60, 400), 120, 4, interval=40, phase=0),
-        # Crosswalk((180, 300), 120, 4, interval=30, phase=5),
-        # Crosswalk((180, 500), 120, 4, interval=30, phase=15),
-        # Crosswalk((300, 200), 120, 4, interval=20, phase=30),
-        # Crosswalk((300, 600), 120, 4, interval=20, phase=40),
-        # Crosswalk((420, 400), 120, 4, interval=40, phase=55),
-        # Crosswalk((540, 600), 120, 4, interval=20, phase=65),
-        # Crosswalk((540, 200), 120, 4, interval=20, phase=80),
-        # Crosswalk((660, 300), 120, 4, interval=30, phase=70),
-        # Crosswalk((660, 500), 120, 4, interval=30, phase=85),
-        # Crosswalk((780, 400), 120, 4, interval=40, phase=95),
+        Crosswalk((50, 180), 100, 4, interval=40, phase=0),
+        Crosswalk((150, 240), 100, 4, interval=40, phase=10),
+
+        Crosswalk((250, 115), 100, 4, interval=40, phase=20),
+        Crosswalk((350, 180), 100, 4, interval=40, phase=30),
+
+        Crosswalk((450, 110), 100, 4, interval=40, phase=40),
+        Crosswalk((550, 110), 100, 4, interval=40, phase=50),
+
+        Crosswalk((650, 150), 100, 4, interval=40, phase=60),
+        Crosswalk((750, 200), 100, 4, interval=40, phase=70),
+
+        Crosswalk((850, 180), 100, 4, interval=40, phase=80),
+        Crosswalk((950, 220), 100, 4, interval=40, phase=90),
     ],
     [
 
