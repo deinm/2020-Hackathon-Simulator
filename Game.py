@@ -10,6 +10,7 @@ from pygame.locals import (K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_SPACE, K_UP,
 from Car import CarSprite
 from Trophy import TrophySprite
 from Wall import WallSprite
+#from Dynamic import Dynamic
 
 
 class Game:
@@ -44,6 +45,8 @@ class Game:
         self.stop = False
         self.car_update = True
         self.database = database
+        self.dynamic_flag = False
+        self.dynamic_obstacle = pygame.image.load('images/car.png')
 
     def run(self, auto=False):
         seconds = 0
@@ -133,12 +136,14 @@ class Game:
             if self.database.stop:
                 break
 
+
             # RENDERING
             self.screen.fill((0, 0, 0))
             if self.car_update:
                 self.car_group.update(deltat)
             collisions = pygame.sprite.groupcollide(
                 self.car_group, self.wall_group, False, False, collided=pygame.sprite.collide_rect_ratio(0.9))
+
             if collisions != {}:
                 self.car_update = False
                 self.win_condition = False
@@ -232,6 +237,12 @@ class Game:
             self.wall_group.draw(self.screen)
             self.car_group.draw(self.screen)
             self.trophy_group.draw(self.screen)
+            # Dynamic Obstacle
+            if self.school_zones != []:
+                if (250 <= self.car.position[0] < 250 + 550) and (350 <= self.car.position[1] < 350 + 100):
+                    print('school_zone')
+                    self.screen.blit(self.dynamic_obstacle, (self.car.position[0] - 100, self.car.position[1]))
+
             # Counter Render
             pygame.display.flip()
 
