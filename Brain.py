@@ -15,7 +15,10 @@ class Brain:
             _ = pygame.event.get()
 
             '''
-            DO NOT CHANGE CODE ABOVE!!!!
+            ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+            ☆☆☆☆☆ DO NOT CHANGE ANOTHER CODE IN 2020-Hackathon-Simulator!!! ☆☆☆☆☆
+            ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ ONLY CHANGE Brain.py!!!☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+            ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
 
             1. How can I get a lidar / gps / imu data?
                 Lidar : data = self.database.lidar.data
@@ -34,6 +37,7 @@ class Brain:
                 self.down(num)
                 self.right(num)
                 self.left(num)
+                ☆☆☆☆☆ num in here is number of acceleration ☆☆☆☆☆
 
                 ☆☆☆☆☆
                 In one loop,
