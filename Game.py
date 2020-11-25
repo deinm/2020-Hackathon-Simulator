@@ -10,7 +10,7 @@ from pygame.locals import (K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_SPACE, K_UP,
 from Car import CarSprite
 from Trophy import TrophySprite
 from Wall import WallSprite
-#from Dynamic import Dynamic
+from Dynamic import Dynamic
 
 
 class Game:
@@ -45,9 +45,9 @@ class Game:
         self.stop = False
         self.car_update = True
         self.database = database
-        self.dynamic_flag = False
-        self.dynamic_obstacle = pygame.image.load('images/car.png')
-        self.dynamic_postion = False
+        self.dynamic_flag=False
+        self.dynamic = Dynamic('images/car.png',(-100,0))
+        self.dynamic_group = pygame.sprite.RenderPlain(self.dynamic)
 
     def run(self, auto=False):
         seconds = 0
@@ -238,15 +238,30 @@ class Game:
             self.wall_group.draw(self.screen)
             self.car_group.draw(self.screen)
             self.trophy_group.draw(self.screen)
+
             # Dynamic Obstacle
+            dynamic_collisions = pygame.sprite.groupcollide(
+                self.car_group, self.dynamic_group, False,False,collided=pygame.sprite.collide_rect_ratio(1.2))
+            self.dynamic_group.update(dynamic_collisions)
+            if dynamic_collisions != {}:
+                self.car_update = False
+                self.win_condition = False
+                self.car.image = pygame.image.load('images/collision.png')
+                self.car.MAX_FORWARD_SPEED = 0
+                self.car.MAX_REVERSE_SPEED = 0
+                self.car.k_right = 0
+                self.car.k_left = 0
+
             if self.school_zones != []:
                 if (250 <= self.car.position[0] < 250 + 550) and (350 <= self.car.position[1] < 350 + 100) & (self.dynamic_flag==False):
-                    print('school_zone')
-                    if self.dynamic_postion == False:
-                         self.dynamic_postion = random.randint(250,600)
-                    if 0<=self.car.position[0]-self.dynamic_postion<=100:
-                        self.screen.blit(self.dynamic_obstacle, (self.dynamic_postion, 375))
-                    # self.dynamic_flag = True
+                    
+                    if self.dynamic.x == -100:
+                        self.dynamic.x = random.randint(250,600)
+                    if 0<=self.car.position[0]-self.dynamic.x<=100:
+                        self.dynamic.draw(self.screen)
+                        if self.dynamic.time == 0:
+                            self.dynamic.time = time.time()
+
 
             # Counter Render
             pygame.display.flip()
