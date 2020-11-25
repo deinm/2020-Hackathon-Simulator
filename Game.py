@@ -46,7 +46,7 @@ class Game:
         self.car_update = True
         self.database = database
         self.dynamic_flag=False
-        self.dynamic = Dynamic('images/car.png',(-100,0))
+        self.dynamic = Dynamic('images/bird.png',(-100,0))
         self.dynamic_group = pygame.sprite.RenderPlain(self.dynamic)
 
     def run(self, auto=False):
@@ -241,7 +241,7 @@ class Game:
 
             # Dynamic Obstacle
             dynamic_collisions = pygame.sprite.groupcollide(
-                self.car_group, self.dynamic_group, False,False,collided=pygame.sprite.collide_rect_ratio(1.2))
+                self.car_group, self.dynamic_group, False,False,collided=pygame.sprite.collide_rect_ratio(1))
             self.dynamic_group.update(dynamic_collisions)
             if dynamic_collisions != {}:
                 self.car_update = False
@@ -254,13 +254,15 @@ class Game:
 
             if self.school_zones != []:
                 if (250 <= self.car.position[0] < 250 + 550) and (350 <= self.car.position[1] < 350 + 100) & (self.dynamic_flag==False):
-                    
                     if self.dynamic.x == -100:
                         self.dynamic.x = random.randint(250,600)
                     if 0<=self.car.position[0]-self.dynamic.x<=100:
-                        self.dynamic.draw(self.screen)
                         if self.dynamic.time == 0:
                             self.dynamic.time = time.time()
+                        if time.time() - self.dynamic.time < 5:
+                            self.dynamic.draw(self.screen)
+                        else:
+                            self.dynamic.x = -100
 
 
             # Counter Render
