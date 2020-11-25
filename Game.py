@@ -1,7 +1,7 @@
 import copy
 import math
 import time
-
+import random
 import numpy as np
 import pygame
 from pygame.locals import (K_DOWN, K_ESCAPE, K_LEFT, K_RIGHT, K_SPACE, K_UP,
@@ -47,6 +47,7 @@ class Game:
         self.database = database
         self.dynamic_flag = False
         self.dynamic_obstacle = pygame.image.load('images/car.png')
+        self.dynamic_postion = False
 
     def run(self, auto=False):
         seconds = 0
@@ -239,9 +240,13 @@ class Game:
             self.trophy_group.draw(self.screen)
             # Dynamic Obstacle
             if self.school_zones != []:
-                if (250 <= self.car.position[0] < 250 + 550) and (350 <= self.car.position[1] < 350 + 100):
+                if (250 <= self.car.position[0] < 250 + 550) and (350 <= self.car.position[1] < 350 + 100) & (self.dynamic_flag==False):
                     print('school_zone')
-                    self.screen.blit(self.dynamic_obstacle, (self.car.position[0] - 100, self.car.position[1]))
+                    if self.dynamic_postion == False:
+                         self.dynamic_postion = random.randint(250,600)
+                    if 0<=self.car.position[0]-self.dynamic_postion<=100:
+                        self.screen.blit(self.dynamic_obstacle, (self.dynamic_postion, 375))
+                    # self.dynamic_flag = True
 
             # Counter Render
             pygame.display.flip()
