@@ -169,5 +169,7 @@ Map3 = (
     [
         Schoolzone((250, 350), 550, 100),
     ],
-    CarSprite('images/car.png', (50, 750)),
+    CarSprite('images/car.png', (900, 400)),
+#CarSprite('images/car.png', (50, 750)),
+
 )
