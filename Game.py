@@ -63,6 +63,7 @@ class Game:
                 if not record:
                     record = True
                     result = seconds
+                    print("Total time:", result)
             events = pygame.event.get()
             if auto:
                 self.car.k_right = self.car.k_left =\
@@ -263,7 +264,6 @@ class Game:
                             self.dynamic.draw(self.screen)
                         else:
                             self.dynamic.x = -100
-
 
             # Counter Render
             pygame.display.flip()
