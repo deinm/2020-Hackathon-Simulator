@@ -7,7 +7,7 @@ from Crosswalk import Crosswalk
 from Schoolzone import Schoolzone
 from TrafficSign import Right, Left
 
-
+import random
 import numpy as np
 
 Map1 = (
@@ -91,13 +91,13 @@ Map2 = (
 
     ],
     [
-        Crosswalk((75, 300), 150, 4, interval=30, phase=0),
-        Crosswalk((225, 500), 150, 4, interval=30, phase=8),
-        Crosswalk((800, 50), 4, 100, interval=30, phase=16),
-        Crosswalk((925, 150), 150, 4, interval=30, phase=24),
-        Crosswalk((925, 400), 150, 4, interval=30, phase=32),
-        Crosswalk((925, 600), 150, 4, interval=30, phase=40),
-        Crosswalk((775, 500), 150, 4, interval=30, phase=48),
+        Crosswalk((75, 300), 150, 4, interval=random.randint(20, 40), phase=0),
+        Crosswalk((225, 500), 150, 4, interval=random.randint(20, 40), phase=8),
+        Crosswalk((800, 50), 4, 100, interval=random.randint(20, 40), phase=16),
+        Crosswalk((925, 150), 150, 4, interval=random.randint(20, 40), phase=24),
+        Crosswalk((925, 400), 150, 4, interval=random.randint(20, 40), phase=32),
+        Crosswalk((925, 600), 150, 4, interval=random.randint(20, 40), phase=40),
+        Crosswalk((775, 500), 150, 4, interval=random.randint(20, 40), phase=48),
     ],
     [
 
@@ -148,20 +148,20 @@ Map3 = (
 
     ],
     [
-        Crosswalk((50, 180), 100, 4, interval=40, phase=0),
-        Crosswalk((150, 240), 100, 4, interval=40, phase=10),
+        Crosswalk((50, 180), 100, 4, interval=random.randint(20, 40), phase=0),
+        Crosswalk((150, 240), 100, 4, interval=random.randint(20, 40), phase=10),
 
-        Crosswalk((250, 115), 100, 4, interval=40, phase=20),
-        Crosswalk((350, 180), 100, 4, interval=40, phase=30),
+        Crosswalk((250, 115), 100, 4, interval=random.randint(20, 40), phase=20),
+        Crosswalk((350, 180), 100, 4, interval=random.randint(20, 40), phase=30),
 
-        Crosswalk((450, 110), 100, 4, interval=40, phase=40),
-        Crosswalk((550, 110), 100, 4, interval=40, phase=50),
+        Crosswalk((450, 110), 100, 4, interval=random.randint(20, 40), phase=40),
+        Crosswalk((550, 110), 100, 4, interval=random.randint(20, 40), phase=50),
 
-        Crosswalk((650, 150), 100, 4, interval=40, phase=60),
-        Crosswalk((750, 200), 100, 4, interval=40, phase=70),
+        Crosswalk((650, 150), 100, 4, interval=random.randint(20, 40), phase=60),
+        Crosswalk((750, 200), 100, 4, interval=random.randint(20, 40), phase=70),
 
-        Crosswalk((850, 180), 100, 4, interval=40, phase=80),
-        Crosswalk((950, 220), 100, 4, interval=40, phase=90),
+        Crosswalk((850, 180), 100, 4, interval=random.randint(20, 40), phase=80),
+        Crosswalk((950, 220), 100, 4, interval=random.randint(20, 40), phase=90),
     ],
     [
 
